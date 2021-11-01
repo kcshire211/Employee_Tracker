@@ -1,14 +1,13 @@
-const fs = require('fs');
 const inquirer = require('inquirer');
 const db = require("./db");
-const { updateEmployee } = require("./db");
+const { } = require("./db");
 require("console.table");
 
 const initialPrompt = [
     {
-        type: 'list',
-        message: "what would you like to do?",
+        type: "list",
         name: "initial",
+        message: "what would you like to do?",
         choices: [
             "View Departments",
             "View Roles",
@@ -17,79 +16,77 @@ const initialPrompt = [
             "Add Role",
             "Add Employee",
             "Update employee role",
-            "Exit",
+            "Quit",
         ],
-},
+    },
 ];
 
+// const addDepartment = [
 
+//     {
+//         type: 'input',
+//         message: "What is the name of the department?",
+//         name: "department",
+// },
+// ];
 
-const addDepartment = [
+// const addRole = [
 
-    {
-        type: 'input',
-        message: "What is the name of the department?",
-        name: "department",
-},
-];
+//     {
+//         type: 'input',
+//         message: "What is the name of the role?",
+//         name: 'name',
+// },
+//     {
+//         type: 'input',
+//         message: "What is the salary of the role?",
+//         name: 'salary',
+// },
+//     {
+//         type: 'input',
+//         message: "Which department does the role belong to?",
+//         name: 'belong',
+// },
+// ];
 
-const addRole = [
+// const addEmp = [
 
-    {
-        type: 'input',
-        message: "What is the name of the role?",
-        name: 'name',
-},
-    {
-        type: 'input',
-        message: "What is the salary of the role?",
-        name: 'salary',
-},
-    {
-        type: 'input',
-        message: "Which department does the role belong to?",
-        name: 'belong',
-},
-];
+//     {
+//         type: 'input',
+//         message: "What is the emplyee's first name?",
+//         name: "name",
+// },
+//     {
+//         type: 'input',
+//         message: "What is the employees last name?",
+//         name: "name",
+// },
+//     {
+//         type: 'input',
+//         message: "What is the employee's role?",
+//         name: "emprole",
+// },
+//     {
+//         type: 'input',
+//         message: "Who is the employee's manager?",
+//         name: "manager",
+// },
+// ];
 
-const addEmployee = [
+// const updateEmployee = [
 
-    {
-        type: 'input',
-        message: "What is the emplyee's first name?",
-        name: "first",
-},
-    {
-        type: 'input',
-        message: "What is the employees last name?",
-        name: "last",
-},
-    {
-        type: 'input',
-        message: "What is the employee's role?",
-        name: "emprole",
-},
-    {
-        type: 'input',
-        message: "Who is the employee's manager?",
-        name: "manager",
-},
-];
-
-const updateEmployee = [
-
-    {
-        type: 'list',
-        message: "Which employee's role do you want to update?",
-        name: 'update',
-        choices: ["employee1","employee2", "employee3"],
-},
-];
+//     {
+//         type: 'list',
+//         message: "Which employee's role do you want to update?",
+//         name: 'update',
+//         choices: ["employee1","employee2", "employee3"],
+// },
+// ];
 
 //function to go through prompts
 function init() {
  inquirer.prompt(initialPrompt).then((res) => {
-     console.log(res.initial);
+     //console.log(res.initial);
     switch (res.initial) {
         case "View Employees":
             viewEmployees();
@@ -104,7 +101,7 @@ function init() {
             addEmployee();
             break;
         case "Add Role":
-            addRole();
+            addRoles();
              break;
         case "Add Department":
             addDepartment();
