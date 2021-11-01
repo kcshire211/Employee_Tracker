@@ -21,68 +21,6 @@ const initialPrompt = [
     },
 ];
 
-// const addDepartment = [
-
-//     {
-//         type: 'input',
-//         message: "What is the name of the department?",
-//         name: "department",
-// },
-// ];
-
-// const addRole = [
-
-//     {
-//         type: 'input',
-//         message: "What is the name of the role?",
-//         name: 'name',
-// },
-//     {
-//         type: 'input',
-//         message: "What is the salary of the role?",
-//         name: 'salary',
-// },
-//     {
-//         type: 'input',
-//         message: "Which department does the role belong to?",
-//         name: 'belong',
-// },
-// ];
-
-// const addEmp = [
-
-//     {
-//         type: 'input',
-//         message: "What is the emplyee's first name?",
-//         name: "name",
-// },
-//     {
-//         type: 'input',
-//         message: "What is the employees last name?",
-//         name: "name",
-// },
-//     {
-//         type: 'input',
-//         message: "What is the employee's role?",
-//         name: "emprole",
-// },
-//     {
-//         type: 'input',
-//         message: "Who is the employee's manager?",
-//         name: "manager",
-// },
-// ];
-
-// const updateEmployee = [
-
-//     {
-//         type: 'list',
-//         message: "Which employee's role do you want to update?",
-//         name: 'update',
-//         choices: ["employee1","employee2", "employee3"],
-// },
-// ];
-
 //function to go through prompts
 function init() {
  inquirer.prompt(initialPrompt).then((res) => {
