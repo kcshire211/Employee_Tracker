@@ -1,7 +1,7 @@
 
 const connection = require("./connection");
 
-
+//imports connection.js ^^. Runs the mysql commands into the findAll for emp, roles, depts, and adds/updates. 
 class DB {
   constructor(connection) {
     this.connection = connection;
