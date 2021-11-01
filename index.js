@@ -101,7 +101,7 @@ function init() {
             addEmployee();
             break;
         case "Add Role":
-            addRoles();
+            addRole();
              break;
         case "Add Department":
             addDepartment();
