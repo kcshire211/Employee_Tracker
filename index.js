@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const db = require("./db");
 const { } = require("./db");
 require("console.table");
-
+// initialPrompt gives list of options when node index.js is run
 const initialPrompt = [
     {
         type: "list",
@@ -21,7 +21,7 @@ const initialPrompt = [
     },
 ];
 
-//function to go through prompts
+//switch function for each of the options to add/view dept, emp, role or update. 
 function init() {
  inquirer.prompt(initialPrompt).then((res) => {
      //console.log(res.initial);
@@ -55,7 +55,7 @@ function init() {
  
 };
 
-
+//individual functions below for adding/viewing/updating
 function viewEmployees() {
     db.findAllEmployees()
         .then(([data]) => {
